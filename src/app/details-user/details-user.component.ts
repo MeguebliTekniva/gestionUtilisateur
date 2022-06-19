@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details-user',
@@ -12,10 +13,13 @@ export class DetailsUserComponent implements OnInit {
   user=[{name:'foulen',lastname:'foulani'},
   {name:'foulen2',lastname:'foulani'},
   {name:'foulen3',lastname:'foulani200'}]
-  constructor() { }
+  idp!:number;
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.name="fahmi belaid"
+    this.idp=this.route.snapshot.params['id'];
+    console.log('id : ',this.idp)
+    this.name=this.user[this.idp-1].name
     this.lastName="chaima sousse"
     
   }

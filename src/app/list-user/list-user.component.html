@@ -1,13 +1,18 @@
-<table>
-    <td>
-        <tr>
-            FirstName
-        </tr>
-        <tr>
-            LastName
-        </tr>
-        <tr>
-            Cin
-        </tr>
-    </td>
-</table>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of user;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{u.name}}</td>
+        <td>{{u.lastname}}</td>
+        <td><button class="btn-success" routerLink="user/{{i+1}}">Détails</button></td>
+      </tr>
+    </tbody>
+  </table>

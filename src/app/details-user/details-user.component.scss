@@ -1,0 +1,121 @@
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, select {
+    cursor: pointer;
+    font: inherit;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: .8rem 1.4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a[href^="mailto:"] {
+    text-decoration: underline;
+}
+
+hr {
+    height: 2px;
+    border-radius: 1px;
+    background-color: #BFBFBF;
+    border: none;
+    margin: 1rem 0;
+}
+
+.thin {
+    font-weight: 600;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 10vw;
+    background-color: #EEEEEE;
+}
+
+body > * {
+    margin: 1rem 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.options-bar {
+    background-color: rgba(0, 0, 0, .07);
+    border-radius: 1rem;
+}
+
+.options-bar, .options-bar > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.options-bar > div {
+    margin: 1.2rem 3rem;
+    flex-grow: 1;
+}
+
+.options-bar > div > * {
+    margin: 4px;
+}
+
+.options-bar > div > * {
+    flex-grow: 1;
+}
+
+#user-profile {
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 505px;
+    align-items: center;
+    padding: 4rem 6rem;
+    background-color: white;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, .1);
+}
+
+#profile-picture {
+    height: 12rem;
+    width: 12rem;
+    background-image: url(data:image/png;base64,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);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1rem 0 2rem;
+}
+
+#user-profile p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 9px;
+    }
+}

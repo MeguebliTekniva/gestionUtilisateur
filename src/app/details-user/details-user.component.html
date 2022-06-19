@@ -1,19 +1,5 @@
-<p> "nom user :"," {{name}}</p>
-<p> nom user : {{lastName}}</p>
 
-//binding propriety 
-1- string Interpolation : {{lastName}}
-<br>
-// lire table 
-{{tab[0]}}
-{{tab[2]}}
-<li *ngFor="let u of user ">
-   name  {{u.lastname}}
-</li>
-// propriety event 
-<button (click)="onAffiche()"> Afficher</button>
-
-// to way interpolation 
-<br>
-<label>name</label>
-<input type="text" [(ngModel)]=name/>
+<div id="user-profile">
+    <div id="profile-picture"></div>
+    <p class="name">{{name}}</p>
+</div>
